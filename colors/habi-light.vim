@@ -60,12 +60,12 @@ hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=yellow guibg=
 hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=yellow guibg=black
 
 " Syntax group {{{1
-hi   String       term=UNDERLINE   gui=none ctermfg=darkgreen   guifg=darkgreen
+hi   String       term=UNDERLINE   gui=none ctermfg=darkgreen   guifg=green
 
-hi   Comment      term=BOLD        ctermfg=gray        cterm=italic   gui=italic     guifg=gray
+hi   Comment      term=BOLD        ctermfg=gray        cterm=italic   gui=italic     guifg=lightgray
 hi   Constant     term=UNDERLINE   ctermfg=darkblue    guifg=darkblue
 
-hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold   gui=bold      guifg=black
+hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold   gui=none      guifg=blue
 
 "hi   Error        term=REVERSE     ctermfg=red         ctermbg=9         guibg=Red           guifg=White
 hi   Error        term=REVERSE     ctermfg=red         ctermbg=white         guibg=Red           guifg=White
@@ -79,6 +79,7 @@ hi   Todo         term=STANDOUT    ctermbg=Yellow      ctermfg=blue      guifg=B
 hi   Type         term=UNDERLINE   ctermfg=blue        gui=NONE          guifg=Blue
 
 hi   Statement    term=BOLD         ctermfg=darkblue   cterm=bold        gui=bold          guifg=darkblue
+hi   Structure    term=none         ctermfg=brown   cterm=none        gui=none          guifg=brown
 
 hi   Operator    term=BOLD         ctermfg=black    gui=none          guifg=black
 
@@ -97,7 +98,7 @@ hi!   link   Label            	 Statement
 hi!   link   Keyword          	 Statement
 hi!   link   Exception        	 Statement
 
-hi!   link   Structure        	 Statement
+"hi!   link   Structure        	 Statement
 
 hi!   link   Include          	 Statement
 hi!   link   Define           	 Statement
