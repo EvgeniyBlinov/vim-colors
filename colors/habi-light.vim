@@ -14,11 +14,11 @@ endif
 let g:colors_name = "habi-light"
 
 " Normal {{{1
-hi Normal ctermfg=black ctermbg=white guifg=black guibg=#F9F5F9
+hi Normal ctermfg=black ctermbg=white guifg=black guibg=white
 
 " Search {{{1
-hi IncSearch cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=UNDERLINE guifg=Black guibg=#FFE568
-hi Search term=reverse cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=NONE guifg=Black guibg=#FFE568
+hi IncSearch cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=UNDERLINE guifg=Black guibg=brown
+hi Search term=reverse cterm=UNDERLINE ctermfg=Black ctermbg=brown gui=UNDERLINE guifg=Black guibg=brown
 
 " Messages {{{1
 hi ErrorMsg gui=BOLD guifg=#EB1513 guibg=NONE
@@ -29,10 +29,10 @@ hi! link Question MoreMsg
 
 " Split area {{{1
 "hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=Yellow ctermbg=DarkGray gui=BOLD guibg=#56A0EE guifg=white
-hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=LightYellow ctermbg=DarkGray gui=BOLD guibg=#56A0EE guifg=white
-hi StatusLineNC gui=NONE guibg=#56A0EE guifg=#E9E9F4 term=BOLD,underline ctermbg=LightGray cterm=NONE
+hi StatusLine term=BOLD,reverse cterm=NONE ctermfg=LightYellow ctermbg=DarkGray gui=BOLD,reverse guibg=DarkGray guifg=LightYellow
+hi StatusLineNC gui=NONE guibg=LightGray  term=BOLD,underline ctermbg=LightGray cterm=NONE gui=BOLD,underline
 hi! link VertSplit StatusLineNC
-hi WildMenu gui=UNDERLINE guifg=#56A0EE guibg=#E9E9F4
+"hi WildMenu gui=UNDERLINE guifg=#56A0EE guibg=#E9E9F4
 
 " Diff {{{1
 hi DiffText   gui=NONE guifg=#f83010 guibg=#ffeae0 cterm=none ctermfg=none ctermbg=LightYellow
@@ -41,45 +41,46 @@ hi DiffDelete gui=NONE guifg=#2020ff guibg=#c8f2ea
 hi! link DiffAdd DiffDelete
 
 " Cursor {{{1
-hi Cursor       gui=none guifg=black guibg=orange
+"hi Cursor       gui=none guifg=black guibg=orange
 "hi lCursor      gui=NONE guifg=#f8f8f8 guibg=#8000ff
-hi CursorIM     gui=NONE guifg=#f8f8f8 guibg=#8000ff
+"hi CursorIM     gui=NONE guifg=#f8f8f8 guibg=#8000ff
 
 " Fold {{{1
-hi Folded gui=NONE guibg=#B5EEB5 guifg=black
+"hi Folded gui=NONE guibg=#B5EEB5 guifg=black
 "hi FoldColumn gui=NONE guibg=#9FD29F guifg=black
-hi! link FoldColumn Folded
+"hi! link FoldColumn Folded
 
 " Other {{{1
-hi Directory    gui=NONE guifg=#0000ff guibg=NONE
+"hi Directory    gui=NONE guifg=#0000ff guibg=NONE
 hi LineNr       gui=NONE guifg=#8080a0 guibg=NONE
-hi NonText      gui=BOLD guifg=#4000ff guibg=#EFEFF7
-"hi SpecialKey   gui=NONE guifg=#A35B00 guibg=NONE
-hi Title         gui=BOLD guifg=#1014AD guibg=NONE
-hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=Black guibg=#BDDFFF
-hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=Black guibg=#BDDFFF
+"hi NonText      gui=BOLD guifg=#4000ff guibg=#EFEFF7
+""hi SpecialKey   gui=NONE guifg=#A35B00 guibg=NONE
+"hi Title         gui=BOLD guifg=#1014AD guibg=NONE
+hi Visual term=reverse ctermfg=yellow ctermbg=black gui=NONE guifg=yellow guibg=black
+hi VisualNOS term=reverse ctermfg=yellow ctermbg=black gui=UNDERLINE guifg=yellow guibg=black
 
 " Syntax group {{{1
-hi   String       term=UNDERLINE   ctermfg=darkgreen   guifg=#B91F49
-hi   Comment      term=BOLD        ctermfg=gray        cterm=italic        guifg=darkcyan
-hi   Constant     term=UNDERLINE   ctermfg=darkblue    guifg=#B91F49
+hi   String       term=UNDERLINE   gui=none ctermfg=darkgreen   guifg=darkgreen
 
-hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold        guifg=black
+hi   Comment      term=BOLD        ctermfg=gray        cterm=italic   gui=italic     guifg=gray
+hi   Constant     term=UNDERLINE   ctermfg=darkblue    guifg=darkblue
+
+hi   Function     term=UNDERLINE   ctermfg=black       cterm=bold   gui=bold      guifg=black
 
 "hi   Error        term=REVERSE     ctermfg=red         ctermbg=9         guibg=Red           guifg=White
 hi   Error        term=REVERSE     ctermfg=red         ctermbg=white         guibg=Red           guifg=White
-hi   Identifier   term=UNDERLINE   ctermfg=darkred     guifg=black
-hi   Special      term=BOLD        ctermfg=darkred     guifg=red2
+hi   Identifier   term=UNDERLINE   ctermfg=darkred     guifg=darkred
+hi   Special      term=BOLD        ctermfg=darkred     guifg=darkred
 
-hi   PreProc      term=UNDERLINE   ctermfg=darkmagenta    guifg=#1071CE
+hi   PreProc      term=UNDERLINE   ctermfg=darkmagenta    guifg=darkmagenta
 
 hi   Tag          term=BOLD        ctermfg=DarkGreen   guifg=DarkGreen
 hi   Todo         term=STANDOUT    ctermbg=Yellow      ctermfg=blue      guifg=Blue          guibg=Yellow
 hi   Type         term=UNDERLINE   ctermfg=blue        gui=NONE          guifg=Blue
 
-hi   Statement    term=BOLD         ctermfg=darkblue   cterm=bold        gui=NONE          guifg=#F06F00
+hi   Statement    term=BOLD         ctermfg=darkblue   cterm=bold        gui=bold          guifg=darkblue
 
-hi   Operator    term=BOLD         ctermfg=black    gui=NONE          guifg=#F06F00
+hi   Operator    term=BOLD         ctermfg=black    gui=none          guifg=black
 
 hi!   link   String           	 String
 hi!   link   Number           	 String
@@ -163,6 +164,7 @@ hi!   link   Debug            	 Special
 "hi! link helpExample DraculaGreen
 "hi! link helpBacktick Special
 
+"##########################################################################################3
 
 " HTML {{{1
 hi htmlLink                 gui=UNDERLINE guifg=#0000ff guibg=NONE
@@ -175,7 +177,7 @@ hi htmlUnderline            gui=UNDERLINE
 hi htmlUnderlineItalic      gui=UNDERLINE,ITALIC
 
 " Tabs {{{1
-highlight TabLine     term=underline cterm=underline ctermfg=0 ctermbg=7 gui=underline guibg=LightGrey
+highlight TabLine     term=underline cterm=underline ctermfg=0 ctermbg=7 gui=underline guibg=LightGrey guifg=0
 highlight TabLineFill term=reverse cterm=reverse gui=reverse
 highlight TabLineSel  term=bold cterm=bold gui=bold
 
@@ -185,7 +187,7 @@ if v:version >= 700
     "highlight SpellCap    term=reverse   ctermbg=9  gui=undercurl guisp=Blue
 	highlight SpellBad term=reverse guifg=Black guibg=#ee9696 guisp=#ee9696 ctermbg=13
 	highlight SpellCap term=reverse guifg=Black guibg=#ee9696 guisp=#ee9696 ctermbg=13
-    highlight SpellRare   term=reverse   ctermbg=13 gui=undercurl guisp=Magenta
+    highlight SpellRare   term=reverse   gui=reverse ctermbg=13  guisp=Magenta
     highlight SpellLocale term=underline ctermbg=11 gui=undercurl guisp=DarkCyan
 endif 
 
