@@ -11,7 +11,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "habi-light"
+let g:colors_name = "habiLight"
 
 " Normal {{{1
 hi Normal ctermfg=black ctermbg=white guifg=black guibg=#F9F5F9
